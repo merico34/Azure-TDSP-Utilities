@@ -5,7 +5,7 @@ author: "Team Data Science Process by Microsoft"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
   html_notebook: 
-    fig_height: 9
+    <!-- fig_height: 9 -->
     toc: yes
   html_document:
     toc: yes
@@ -14,9 +14,9 @@ output:
     css: style.css
     theme: journal
     highlight: espresso
-    fig_width: 7
-    fig_height: 6
-    fig_caption: true
+    <!-- fig_width: 7 -->
+    <!-- fig_height: 6 -->
+    <!-- fig_caption: true -->
 runtime: shiny
 ---
 
@@ -678,6 +678,8 @@ if(isCategorical[config$Target])
     })
     
   }
+,      
+options = list(height = 500)
 )
 } else {
   
@@ -789,6 +791,8 @@ shinyApp(
     })
     
   }
+,      
+options = list(height = 500)
 )
 ```
 
@@ -924,6 +928,8 @@ shinyApp(
     })
     
   }
+,      
+options = list(height = 500)
 )
 
 ```
@@ -967,6 +973,8 @@ shinyApp(
     })
     
   }
+,      
+options = list(height = 500)
 )
 ```
 
@@ -1013,6 +1021,8 @@ shinyApp(
     })
     
   }
+,      
+options = list(height = 500)
 )
 ```
 
@@ -1062,6 +1072,8 @@ shinyApp(
       write(r_code(), file = config$RLogFilePath, append = TRUE)
     })
   }
+,      
+options = list(height = 500)
 )
 }
 
@@ -1125,6 +1137,8 @@ shinyApp(
     })
     
   }
+,      
+options = list(height = 500)
 )
 ```
 
@@ -1249,6 +1263,8 @@ legend('topright', cex=.8,  legend = levels(data[[input$catvar]]), fill = 1:nlev
     })
     
   }
+,      
+options = list(height = 500)
 )
 
 }
@@ -1304,6 +1320,8 @@ shinyApp(
     })
     
   }
+,      
+options = list(height = 500)
 )
 }
 
