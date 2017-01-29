@@ -4,6 +4,9 @@ title: "Data Quality Report"
 author: "Team Data Science Process by Microsoft"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
+  html_notebook: 
+    fig_height: 9
+    toc: yes
   html_document:
     toc: yes
     toc_float: true
@@ -15,7 +18,6 @@ output:
     fig_height: 6
     fig_caption: true
 runtime: shiny
-
 ---
 
 # Task Summary
@@ -36,11 +38,12 @@ if(length(new.packages))
 if (!'knitr' %in% installed.packages()[,'Package']){
   knitrurl <- 'http://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.12.tar.gz'
   install.packages(knitrurl, repos=NULL, type='source')
-} else if ('1.12' != installed.packages()['knitr','Version']){
-  remove.packages('knitr')
-  knitrurl <- 'http://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.12.tar.gz'
-  install.packages(knitrurl, repos=NULL, type='source')
-}
+} 
+# else if ('1.12' != installed.packages()['knitr','Version']){
+#   remove.packages('knitr')
+#   knitrurl <- 'http://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.12.tar.gz'
+#   install.packages(knitrurl, repos=NULL, type='source')
+# }
 
 library(yaml)
 library(RODBC)
@@ -246,11 +249,12 @@ if(length(new.packages))
 if (!'knitr' %in% installed.packages()[,'Package']){
   knitrurl <- 'http://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.12.tar.gz'
   install.packages(knitrurl, repos=NULL, type='source')
-} else if ('1.12' != installed.packages()['knitr','Version']){
-  remove.packages('knitr')
-  knitrurl <- 'http://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.12.tar.gz'
-  install.packages(knitrurl, repos=NULL, type='source')
-}
+} 
+# else if ('1.12' != installed.packages()['knitr','Version']){
+#   remove.packages('knitr')
+#   knitrurl <- 'http://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.12.tar.gz'
+#   install.packages(knitrurl, repos=NULL, type='source')
+# }
 
 library(yaml)
 library(RODBC)
